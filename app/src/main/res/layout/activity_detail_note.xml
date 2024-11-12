@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tombol Kembali -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        android:layout_alignParentEnd="true"
+        app:backgroundTint="@color/blue"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Back"
+        android:padding="8dp" />
+
+    <!-- Judul Catatan -->
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Note Title"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Konten Catatan -->
+    <TextView
+        android:id="@+id/noteContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:text="Note Content"/>
+
+</LinearLayout>
