@@ -13,6 +13,13 @@ class DetailNoteActivity : AppCompatActivity() {
         binding = ActivityDetailNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Mengatur toolbar sebagai ActionBar
+        setSupportActionBar(binding.toolbar)
+
+        // Aktifkan tombol kembali di toolbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Notes" // Mengatur judul toolbar, jika diperlukan
+
         // Ambil data dari Intent
         val title = intent.getStringExtra(EXTRA_TITLE)
         val content = intent.getStringExtra(EXTRA_CONTENT)
@@ -21,9 +28,9 @@ class DetailNoteActivity : AppCompatActivity() {
         binding.noteTitle.text = title
         binding.noteContent.text = content
 
-        // Tombol Kembali untuk menutup aktivitas
-        binding.backButton.setOnClickListener {
-            onBackPressed()  // Fungsi untuk kembali ke aktivitas sebelumnya
+        // Tombol Kembali pada toolbar untuk menutup aktivitas
+        binding.toolbar.setNavigationOnClickListener {
+            finish()  // Menutup aktivitas dan kembali ke layar sebelumnya
         }
     }
 
